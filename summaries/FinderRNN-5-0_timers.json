@@ -1,0 +1,119 @@
+{
+  "name": "root",
+  "gauges": [
+    {
+      "name": "FinderBrain.mean_reward",
+      "value": -10914.516247153282,
+      "min": -10914.516247153282,
+      "max": -10914.516247153282,
+      "count": 1
+    }
+  ],
+  "total": 22.038775283529755,
+  "count": 1,
+  "self": 10.730828345170872,
+  "children": [
+    {
+      "name": "TrainerController.advance",
+      "total": 11.307946938358883,
+      "count": 1318,
+      "self": 1.174263182857839,
+      "children": [
+        {
+          "name": "env_step",
+          "total": 10.133683755501044,
+          "count": 1318,
+          "self": 8.208783868973018,
+          "children": [
+            {
+              "name": "SubprocessEnvManager._take_step",
+              "total": 1.905330479523963,
+              "count": 1318,
+              "self": 0.023229027203189645,
+              "children": [
+                {
+                  "name": "PPOPolicy.evaluate",
+                  "total": 1.8821014523207733,
+                  "count": 1318,
+                  "self": 1.8821014523207733
+                }
+              ]
+            },
+            {
+              "name": "workers",
+              "total": 0.019569407004063066,
+              "count": 1317,
+              "self": 0.0,
+              "children": [
+                {
+                  "name": "worker_root",
+                  "total": 17.945715983933827,
+                  "count": 1317,
+                  "is_parallel": true,
+                  "self": 10.815913088898338,
+                  "children": [
+                    {
+                      "name": "BrainInfo.process_pixels",
+                      "total": 0.020346599744238247,
+                      "count": 1,
+                      "is_parallel": true,
+                      "self": 0.00026596862410865896,
+                      "children": [
+                        {
+                          "name": "image_decompress",
+                          "total": 0.02008063112012959,
+                          "count": 1,
+                          "is_parallel": true,
+                          "self": 0.02008063112012959
+                        }
+                      ]
+                    },
+                    {
+                      "name": "UnityEnvironment.step",
+                      "total": 7.109456295291252,
+                      "count": 1317,
+                      "is_parallel": true,
+                      "self": 0.5005862716963048,
+                      "children": [
+                        {
+                          "name": "UnityEnvironment._generate_step_input",
+                          "total": 0.11259628604539085,
+                          "count": 1317,
+                          "is_parallel": true,
+                          "self": 0.11259628604539085
+                        },
+                        {
+                          "name": "communicator.exchange",
+                          "total": 5.889792628526446,
+                          "count": 1317,
+                          "is_parallel": true,
+                          "self": 5.889792628526446
+                        },
+                        {
+                          "name": "BrainInfo.process_pixels",
+                          "total": 0.6064811090231101,
+                          "count": 1317,
+                          "is_parallel": true,
+                          "self": 0.2183323226925511,
+                          "children": [
+                            {
+                              "name": "image_decompress",
+                              "total": 0.38814878633055905,
+                              "count": 1317,
+                              "is_parallel": true,
+                              "self": 0.38814878633055905
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

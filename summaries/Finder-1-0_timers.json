@@ -1,0 +1,133 @@
+{
+  "name": "root",
+  "gauges": [
+    {
+      "name": "FinderBrain.mean_reward",
+      "value": 990.6244340902194,
+      "min": -2709.524401502218,
+      "max": 990.6244340902194,
+      "count": 23
+    }
+  ],
+  "total": 1258.1279269218878,
+  "count": 1,
+  "self": 9.684106471189352,
+  "children": [
+    {
+      "name": "TrainerController.advance",
+      "total": 1248.4438204506985,
+      "count": 28667,
+      "self": 76.80893783976103,
+      "children": [
+        {
+          "name": "env_step",
+          "total": 700.3016954698511,
+          "count": 28667,
+          "self": 613.8081435385892,
+          "children": [
+            {
+              "name": "SubprocessEnvManager._take_step",
+              "total": 85.99704883782371,
+              "count": 28667,
+              "self": 0.6638400830941578,
+              "children": [
+                {
+                  "name": "PPOPolicy.evaluate",
+                  "total": 85.33320875472955,
+                  "count": 28667,
+                  "self": 85.33320875472955
+                }
+              ]
+            },
+            {
+              "name": "workers",
+              "total": 0.49650309343818755,
+              "count": 28667,
+              "self": 0.0,
+              "children": [
+                {
+                  "name": "worker_root",
+                  "total": 1244.120595095506,
+                  "count": 28667,
+                  "is_parallel": true,
+                  "self": 753.0566685578603,
+                  "children": [
+                    {
+                      "name": "BrainInfo.process_pixels",
+                      "total": 0.01619551937272501,
+                      "count": 9,
+                      "is_parallel": true,
+                      "self": 0.001654043701575958,
+                      "children": [
+                        {
+                          "name": "image_decompress",
+                          "total": 0.014541475671149051,
+                          "count": 9,
+                          "is_parallel": true,
+                          "self": 0.014541475671149051
+                        }
+                      ]
+                    },
+                    {
+                      "name": "UnityEnvironment.step",
+                      "total": 491.04773101827277,
+                      "count": 28667,
+                      "is_parallel": true,
+                      "self": 22.123396763363246,
+                      "children": [
+                        {
+                          "name": "UnityEnvironment._generate_step_input",
+                          "total": 4.836382657462435,
+                          "count": 28667,
+                          "is_parallel": true,
+                          "self": 4.836382657462435
+                        },
+                        {
+                          "name": "communicator.exchange",
+                          "total": 359.41680100143634,
+                          "count": 28667,
+                          "is_parallel": true,
+                          "self": 359.41680100143634
+                        },
+                        {
+                          "name": "BrainInfo.process_pixels",
+                          "total": 104.67115059601078,
+                          "count": 258003,
+                          "is_parallel": true,
+                          "self": 39.12650942739812,
+                          "children": [
+                            {
+                              "name": "image_decompress",
+                              "total": 65.54464116861266,
+                              "count": 258003,
+                              "is_parallel": true,
+                              "self": 65.54464116861266
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "update_policy",
+          "total": 471.33318714108646,
+          "count": 25,
+          "self": 29.209662196845557,
+          "children": [
+            {
+              "name": "PPOPolicy.update",
+              "total": 442.1235249442409,
+              "count": 734,
+              "self": 442.1235249442409
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
